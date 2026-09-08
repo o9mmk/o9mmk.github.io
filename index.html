@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>岡田賢揮｜コーポレートエンジニア</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700;800&family=IBM+Plex+Sans+JP:wght@400;500;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+:root{
+  --paper:#f6f7f5; --card:#ffffff; --ink:#1c2830; --sub:#55656d; --line:#dde3df;
+  --run:#0e7a5f; --run-bg:#e3f1ea; --poc:#a06d10; --poc-bg:#f6ecd8;
+  --accent:#0e7a5f; --num:#123d31;
+  --mincho:"Shippori Mincho","Hiragino Mincho ProN",serif;
+  --sans:"IBM Plex Sans JP","Hiragino Kaku Gothic ProN",sans-serif;
+  --mono:"IBM Plex Mono","Menlo",monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#101619; --card:#182024; --ink:#e8ece9; --sub:#9aa8a1; --line:#2a3438;
+    --run:#4cc9a3; --run-bg:#12352b; --poc:#d9a94f; --poc-bg:#3a2f16;
+    --accent:#4cc9a3; --num:#bfe8d8;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#101619; --card:#182024; --ink:#e8ece9; --sub:#9aa8a1; --line:#2a3438;
+  --run:#4cc9a3; --run-bg:#12352b; --poc:#d9a94f; --poc-bg:#3a2f16;
+  --accent:#4cc9a3; --num:#bfe8d8;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);
+  font-size:16px;line-height:1.9;margin:0}
+.wrap{max-width:920px;margin:0 auto;padding:56px 24px 72px}
+header.hero{border-bottom:1px solid var(--line);padding-bottom:36px;margin-bottom:40px}
+.updated{font-family:var(--mono);font-size:12.5px;color:var(--sub);
+  letter-spacing:.08em;margin-bottom:20px}
+h1{font-family:var(--mincho);font-weight:800;font-size:clamp(28px,5vw,40px);
+  letter-spacing:.04em;line-height:1.4;margin:0 0 12px;text-wrap:balance}
+.role{font-size:17px;font-weight:700;margin:0 0 18px}
+.role span{color:var(--sub);font-weight:400}
+.lede{max-width:40em;margin:0}
+.lede em{font-style:normal;background:linear-gradient(transparent 68%,var(--run-bg) 68%)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:1px;background:var(--line);border:1px solid var(--line);margin:0 0 48px}
+.kpi{background:var(--card);padding:16px 18px}
+.kpi b{display:block;font-family:var(--mono);font-weight:600;font-size:21px;
+  color:var(--num);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.kpi small{color:var(--sub);font-size:12.5px;line-height:1.6;display:block;margin-top:3px}
+h2{font-family:var(--mincho);font-weight:700;font-size:22px;letter-spacing:.06em;margin:0 0 6px}
+.sec-note{color:var(--sub);font-size:14px;margin:0 0 22px}
+section{margin-bottom:56px}
+.feature{background:var(--card);border:1px solid var(--line);padding:24px 26px;
+  margin-bottom:16px}
+.feature .head{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:10px}
+.chip{font-family:var(--mono);font-size:11.5px;font-weight:600;letter-spacing:.08em;
+  padding:2px 9px;border-radius:2px}
+.chip.run{color:var(--run);background:var(--run-bg)}
+.chip.poc{color:var(--poc);background:var(--poc-bg)}
+.feature h3{font-size:18px;font-weight:700;margin:0;font-family:var(--mincho)}
+.feature dl{display:grid;grid-template-columns:96px 1fr;gap:6px 16px;margin:0}
+.feature dt{color:var(--sub);font-size:13px;font-weight:500;padding-top:2px}
+.feature dd{margin:0;font-size:15px}
+.feature dd.win b{font-family:var(--mono);color:var(--num);font-weight:600}
+@media (max-width:560px){.feature dl{grid-template-columns:1fr;gap:0 0}
+  .feature dt{margin-top:8px}}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.tags span{font-family:var(--mono);font-size:11.5px;color:var(--sub);
+  border:1px solid var(--line);padding:1px 7px;border-radius:2px}
+.ledger{border-top:1px solid var(--line)}
+.ledger .row{display:grid;grid-template-columns:230px 1fr;gap:16px;
+  padding:14px 2px;border-bottom:1px solid var(--line)}
+@media (max-width:640px){.ledger .row{grid-template-columns:1fr;gap:2px}}
+.ledger .row .nm{font-size:15px;font-weight:700}
+.ledger .row .nm .chip{margin-left:8px;vertical-align:1px}
+.ledger .row p{margin:0;color:var(--sub);font-size:14px}
+.style3{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.scard{background:var(--card);border:1px solid var(--line);padding:18px 20px}
+.scard .no{font-family:var(--mono);font-size:12px;color:var(--accent);
+  letter-spacing:.1em;font-weight:600}
+.scard h3{font-size:16px;font-weight:700;margin:6px 0 8px}
+.scard p{margin:0;font-size:14px;line-height:1.85}
+.timeline{border-left:2px solid var(--line);margin-left:6px;padding-left:22px;
+  display:flex;flex-direction:column;gap:18px}
+.tstop{position:relative}
+.tstop::before{content:"";position:absolute;left:-28px;top:9px;width:10px;height:10px;
+  border-radius:50%;background:var(--paper);border:2px solid var(--sub)}
+.tstop.now::before{background:var(--run);border-color:var(--run)}
+.tstop .when{font-family:var(--mono);font-size:12.5px;color:var(--sub);letter-spacing:.05em}
+.tstop .what{font-weight:700;font-size:15.5px}
+.tstop p{margin:2px 0 0;color:var(--sub);font-size:14px;max-width:44em}
+footer{border-top:1px solid var(--line);padding-top:26px;color:var(--sub);font-size:14px}
+footer a.mail{font-family:var(--mono);color:var(--ink);font-size:15px;
+  text-decoration-color:var(--accent)}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media print{
+  body{background:#fff;color:#000;font-size:12px}
+  .wrap{padding:0;max-width:none}
+  .feature,.scard,.kpi{border-color:#bbb}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <p class="updated">PORTFOLIO — 実績更新: 2026年9月</p>
+  <h1>業務を整理し、仕組みを作り、<br>運用まで担う。</h1>
+  <p class="role">岡田 賢揮 <span>／ コーポレートエンジニア（情シス × AI活用開発）</span></p>
+  <p class="lede">従業員約220名のグループ企業で、情シスの意思決定から社内システムの開発・運用までを担当しています。コードや画面は社内資産のため非公開としているので、このページでは<em>「何が本番で動き続けているか」と「そのとき何を判断したか」</em>を一覧にしました。実装にはAIエージェントを活用し、要件定義・設計・レビュー・検証は自分が担います。</p>
+</header>
+
+<div class="kpis">
+  <div class="kpi"><b>60分 → 数分</b><small>給与辞令の作成時間（自動生成〜人事システム登録）</small></div>
+  <div class="kpi"><b>161<span style="font-size:13px"> 人/月</span></b><small>社内ポータルの月間利用者（GA4・直近30日実測）</small></div>
+  <div class="kpi"><b>手作業 → 自動</b><small>入退社アカウントの発行・停止（承認フローつき）</small></div>
+  <div class="kpi"><b>158<span style="font-size:13px"> 件</span></b><small>台帳化した全社IT資産（システム・自動化ジョブ・ツール含む）</small></div>
+</div>
+
+<section>
+  <h2>本番運用の代表実績</h2>
+  <p class="sec-note">いずれも一人で企画・開発し、運用手順書と引き継ぎまで含めて維持しています（2026年9月時点）。</p>
+
+  <article class="feature">
+    <div class="head"><span class="chip run">本番稼働中</span><h3>社内ポータル ＋ 検索チャットボット</h3></div>
+    <dl>
+      <dt>課題</dt><dd>社内情報が散在し、問い合わせが特定の人に集中していた。</dd>
+      <dt>作ったもの</dt><dd>社内ポータルをフルスクラッチ構築。FAQ検索と、全文検索＋LLMの回答生成を組み合わせたチャットボットを搭載。コンテンツは非エンジニアがスプレッドシートで更新できる設計。</dd>
+      <dt>判断</dt><dd>検索はベクトルDBではなく軽量な全文検索（BM25）を採用。規模に対する運用費と保守のしやすさを優先した。</dd>
+      <dt>成果</dt><dd class="win">月間利用者 <b>161人</b>・PV <b>1,354</b>（直近30日・GA4実測）。利用状況は継続計測中。</dd>
+    </dl>
+    <div class="tags"><span>Node.js</span><span>Cloud Run</span><span>Vertex AI</span><span>BM25</span><span>GA4</span></div>
+  </article>
+
+  <article class="feature">
+    <div class="head"><span class="chip run">常時自動運転</span><h3>入退社アカウントの発行・停止 自動化</h3></div>
+    <dl>
+      <dt>課題</dt><dd>入退社のたびに依頼ベースでアカウントを手作業発行・停止。漏れと遅延のリスクが常にあった。</dd>
+      <dt>作ったもの</dt><dd>人事イベントをWebhookで受信し、各種アカウントの発行・停止を自動実行する仕組み。承認フローを設計し、運用マニュアルを整備して承認は業務部門へ引き継いだ。</dd>
+      <dt>判断</dt><dd>いきなり全自動にせず、確認運転の期間を挟んで例外パターンを洗い出してから常時自動運転へ移行した。</dd>
+      <dt>成果</dt><dd class="win">依頼ベースの手作業 → <b>人事イベント起点の自動処理</b>。属人運用から卒業。</dd>
+    </dl>
+    <div class="tags"><span>GAS</span><span>Webhook</span><span>SaaS API</span></div>
+  </article>
+
+  <article class="feature">
+    <div class="head"><span class="chip run">運用中</span><h3>給与辞令の自動生成 〜 人事システム連携</h3></div>
+    <dl>
+      <dt>課題</dt><dd>辞令の作成・人事システムへの登録が1回あたり約1時間の手作業だった。</dd>
+      <dt>作ったもの</dt><dd>スプレッドシートの給与データから辞令PDFを自動生成し、人事SaaSへの登録・添付までを自動化。担当者向けの手順書つきで引き渡し。</dd>
+      <dt>成果</dt><dd class="win">約1時間/回 → <b>数分</b>。作業自体を担当者へ返せた。</dd>
+    </dl>
+    <div class="tags"><span>GAS</span><span>Python</span><span>人事SaaS API</span></div>
+  </article>
+</section>
+
+<section>
+  <h2>その他の稼働システム・検証</h2>
+  <div class="ledger">
+    <div class="row"><div class="nm">IT資産の棚卸し自動突合</div><p>定期実行ジョブ・クラウドサービス・ツール類158件の構成と稼働情報を機械実測で突合し、確認が必要な資産を可視化。台帳とダッシュボードで管理。</p></div>
+    <div class="row"><div class="nm">組織マスタのSaaS間突合</div><p>名刺管理・人事・グループウェアに散らばる部署マスタを一括是正し、日次の自動突合で不整合を検知。</p></div>
+    <div class="row"><div class="nm">依頼のタスク自動起票</div><p>チャットで受けた自分宛の依頼をLLMが行動形タスクへ変換して起票。対応漏れを防ぐ運用を支援。</p></div>
+    <div class="row"><div class="nm">PCキッティング自動化</div><p>セットアップをスクリプト化し、設定値の正本を一元管理。誰が実行しても同じ状態に仕上がる。</p></div>
+    <div class="row"><div class="nm">経営層向けSNS草稿の週次生成</div><p>投稿草稿を週次で自動生成し、担当者へ配信。最終判断は人が行う運用設計。</p></div>
+    <div class="row"><div class="nm">Web会議の議事録自動化<span class="chip poc">PoC</span></div><p>録画機能がないプラン環境向けに、音声取得〜文字起こし〜議事録生成を自作し実証。話者識別は段階的フォールバック設計。</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>意思決定と統制の仕事</h2>
+  <p class="sec-note">作るだけでなく、「買う・任せる・止める・守る」の判断も担当しています。</p>
+  <div class="ledger">
+    <div class="row"><div class="nm">ベンダー・予算判断</div><p>外部委託業務やSaaS更新費について、内製化した場合のコストとリスクを試算して継続/内製を判断。安易な内製化による業務リスクを回避した。</p></div>
+    <div class="row"><div class="nm">契約の見直し</div><p>IT資産管理ツールのリプレースを主導。要件定義・複数製品の比較・費用試算まで実施。</p></div>
+    <div class="row"><div class="nm">全社セキュリティ監査</div><p>クラウドストレージの共有権限を全社監査して是正し、以後は週次の自動監査で維持。</p></div>
+    <div class="row"><div class="nm">AI利用の統制</div><p>AI利用ルールとエージェント運用基盤を設計。「使う側」と「安全に使わせる側」の両輪。</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>開発スタイル</h2>
+  <p class="sec-note">「AIに書かせる」を、検証と統制で本番品質にする方法。</p>
+  <div class="style3">
+    <div class="scard"><span class="no">STYLE 01</span><h3>実装はAI、判断は自分</h3><p>コードはAIエージェントに書かせ、要件定義・設計判断・レビュー・検証・運用設計に自分の時間を使う。この体制で直近2ヶ月に約230コミット・15プロジェクトを並行した（git実測）。</p></div>
+    <div class="scard"><span class="no">STYLE 02</span><h3>検証してから「完了」と言う</h3><p>テスト・コミット前ゲート（秘密情報スキャン等）・AIコードレビューの多段構成。ただし最終の採否判断と実機での動作確認は必ず人間側で行う。</p></div>
+    <div class="scard"><span class="no">STYLE 03</span><h3>連携経路はリスクで選ぶ</h3><p>SaaS連携は公式APIを第一選択とし、提供がない業務は影響範囲・保守性・利用条件を評価してから代替経路を設計する。動けばいい、では作らない。</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>経歴</h2>
+  <div class="timeline">
+    <div class="tstop now"><div class="when">2025.11 —</div><div class="what">障害福祉グループ企業 ／ 業務推進DX担当（情シス）</div><p>SaaS選定の意思決定〜内製開発〜AI活用基盤〜セキュリティ統制まで一気通貫で担当。</p></div>
+    <div class="tstop"><div class="when">2022.10 — 2025.4</div><div class="what">ITサービス企業 ／ インフラエンジニア</div><p>クライアントPC運用・オンサイト対応、Azure（Entra ID権限管理・AVD構築運用）。AZ-900取得。</p></div>
+    <div class="tstop"><div class="when">2018.2 — 2022.5</div><div class="what">携帯キャリアショップ ／ 販売 → 店長</div><p>店舗成績を全国30位・地区2〜3位へ。個人販売実績で社内歴代1位（当時）。数字で語る折衝力の原点。</p></div>
+  </div>
+</section>
+
+<footer>
+  <p>社内情報を含むコード・画面は非公開です。面談では、公開可能な範囲の構成図とダミーデータによる再現例を使ってご説明します。<br>
+  連絡先: <a class="mail" href="mailto:okada9mm@gmail.com">okada9mm@gmail.com</a></p>
+</footer>
+</div>
+</body>
+</html>
