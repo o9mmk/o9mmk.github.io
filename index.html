@@ -88,6 +88,24 @@ section{margin-bottom:56px}
 .tstop .when{font-family:var(--mono);font-size:12.5px;color:var(--sub);letter-spacing:.05em}
 .tstop .what{font-weight:700;font-size:15.5px}
 .tstop p{margin:2px 0 0;color:var(--sub);font-size:14px;max-width:44em}
+.want{font-size:14px;color:var(--sub);margin:14px 0 0;max-width:44em}
+.want b{color:var(--ink);font-weight:700}
+.evidence{margin-top:14px;border-top:1px dashed var(--line);padding-top:10px}
+.evidence summary{cursor:pointer;font-family:var(--mono);font-size:12.5px;color:var(--accent);
+  letter-spacing:.06em;list-style:none}
+.evidence summary::before{content:"+ ";}
+.evidence[open] summary::before{content:"− ";}
+.evidence dl{margin-top:10px}
+.flow{font-family:var(--mono);font-size:12.5px;color:var(--ink);background:var(--paper);
+  border:1px solid var(--line);padding:10px 12px;margin:0 0 4px;white-space:pre-wrap;line-height:1.7}
+.nm-note{color:var(--sub);font-size:12.5px}
+.repo{background:var(--card);border:1px solid var(--line);padding:22px 26px}
+.repo h3{font-family:var(--mincho);font-size:18px;margin:0 0 6px}
+.repo h3 a{text-decoration-color:var(--accent)}
+.repo p{margin:0 0 10px;font-size:15px}
+.repo ul{margin:0;padding-left:1.2em;font-size:14px}
+.repo li{margin:2px 0}
+.repo code{font-family:var(--mono);font-size:12.5px;background:var(--paper);padding:1px 5px;border-radius:2px}
 footer{border-top:1px solid var(--line);padding-top:26px;color:var(--sub);font-size:14px}
 footer a.mail{font-family:var(--mono);color:var(--ink);font-size:15px;
   text-decoration-color:var(--accent)}
@@ -106,12 +124,13 @@ a{color:var(--accent)}
   <p class="updated">PORTFOLIO — 実績更新: 2026年9月</p>
   <h1>業務を整理し、仕組みを作り、<br>運用まで担う。</h1>
   <p class="role">岡田 賢揮 <span>／ コーポレートエンジニア（情シス × AI活用開発）</span></p>
-  <p class="lede">従業員約220名のグループ企業で、情シスの意思決定から社内システムの開発・運用までを担当しています。コードや画面は社内資産のため非公開としているので、このページでは<em>「何が本番で動き続けているか」と「そのとき何を判断したか」</em>を一覧にしました。実装にはAIエージェントを活用し、要件定義・設計・レビュー・検証は自分が担います。</p>
+  <p class="lede">従業員約220名のグループ企業で、情シスの意思決定から社内システムの開発・運用までを担当しています。コードや画面は社内資産のため非公開としているので、このページでは<em>「何が本番で動き続けているか」と「そのとき何を判断したか」</em>を一覧にしました。AIエージェントを使って開発しますが、設計・コードレビュー・本番検証・運用の責任は自分が負います。AIの案をどう検証して採否を決めているかは<a href="#style">開発スタイル</a>に、読めるコードは<a href="#code">公開コード</a>に置きました。</p>
+  <p class="want"><b>希望する役割:</b> 事業会社の社内SE／情シス／コーポレートIT／DX推進。SaaS選定から内製開発・統制までを一人で回す規模の組織が得意です。<b>副業:</b> 業務自動化・SaaS連携（GAS／Python／API）の設計と実装。稼働条件は要相談。</p>
 </header>
 
 <div class="kpis">
-  <div class="kpi"><b>60分 → 数分</b><small>給与辞令の作成時間（自動生成〜人事システム登録）</small></div>
-  <div class="kpi"><b>161<span style="font-size:13px"> 人/月</span></b><small>社内ポータルの月間利用者（GA4・直近30日実測）</small></div>
+  <div class="kpi"><b>60分 → 数分</b><small>給与辞令1回分の作成〜人事システム登録（代表作業での本人実測）</small></div>
+  <div class="kpi"><b>161<span style="font-size:13px"> 人/30日</span></b><small>社内ポータルのGA4ユーザー数（2026年8月11日時点の直近30日・対象ホスト限定）</small></div>
   <div class="kpi"><b>手作業 → 自動</b><small>入退社アカウントの発行・停止（承認フローつき）</small></div>
   <div class="kpi"><b>158<span style="font-size:13px"> 件</span></b><small>台帳化した全社IT資産（システム・自動化ジョブ・ツール含む）</small></div>
 </div>
@@ -126,9 +145,21 @@ a{color:var(--accent)}
       <dt>課題</dt><dd>社内情報が散在し、問い合わせが特定の人に集中していた。</dd>
       <dt>作ったもの</dt><dd>社内ポータルをフルスクラッチ構築。FAQ検索と、全文検索＋LLMの回答生成を組み合わせたチャットボットを搭載。コンテンツは非エンジニアがスプレッドシートで更新できる設計。</dd>
       <dt>判断</dt><dd>検索はベクトルDBではなく軽量な全文検索（BM25）を採用。規模に対する運用費と保守のしやすさを優先した。</dd>
-      <dt>成果</dt><dd class="win">月間利用者 <b>161人</b>・PV <b>1,354</b>（直近30日・GA4実測）。利用状況は継続計測中。</dd>
+      <dt>成果</dt><dd class="win">GA4ユーザー数 <b>161人</b>・PV <b>1,354</b>（2026年8月11日時点の直近30日・対象ホスト限定）。利用状況は継続計測中。</dd>
     </dl>
     <div class="tags"><span>Node.js</span><span>Cloud Run</span><span>Vertex AI</span><span>BM25</span><span>GA4</span></div>
+    <details class="evidence">
+      <summary>証拠と限界 — 構成・測定条件・障害対応・未計測のもの</summary>
+      <div class="flow">スプレッドシート（非エンジニアが更新）→ 同期ジョブ → ポータル（Cloud Run）
+検索質問 → BM25 全文検索 → 上位文書 + 質問 → LLM 回答生成 → 出典つき返答</div>
+      <dl>
+        <dt>測定条件</dt><dd>GA4。計測は2026年6月9日以降のみ有効（それ以前は測定設定の不備で無効扱い）。旧ポータルからの流入を除くため hostName でフィルタ。数値は直近30日・2026年8月11日時点: 利用者161人／セッション783／PV1,354。</dd>
+        <dt>運用期間</dt><dd>2026年春に本番切替、以後継続稼働。コンテンツ更新は担当部署が実施。</dd>
+        <dt>障害対応</dt><dd>7月6日の本番反映後、チャットが「聞き返しを繰り返す」回帰を起こし7月9日に発覚。改善案の一つに含まれていた生成設定の既定値が本番へそのまま入り、モデルの思考機能を無効化していたのが主因。環境変数1箇所の変更で暫定復旧し、実画面で聞き返しが止まることを確認した。検知が3日遅れたのは、本番反映後の動作確認を代表質問で行っていなかったため。構造因は検証環境と本番の既定値の不一致で、再発防止策の実施状況は本ページ更新時点で要確認。</dd>
+        <dt>自分の判断</dt><dd>ベクトルDBを入れない。対象は社内規程・FAQ・手順書程度の文書量で更新も月数回にとどまるため、運用費と保守のしやすさを優先した。両方式の精度・費用の比較評価は未実施。</dd>
+        <dt>未計測</dt><dd>問い合わせ件数の減少、担当者の対応時間の変化、維持費と月あたりの保守時間。利用者数は取れているが、業務効果の直接指標はまだ測れていない。</dd>
+      </dl>
+    </details>
   </article>
 
   <article class="feature">
@@ -137,9 +168,23 @@ a{color:var(--accent)}
       <dt>課題</dt><dd>入退社のたびに依頼ベースでアカウントを手作業発行・停止。漏れと遅延のリスクが常にあった。</dd>
       <dt>作ったもの</dt><dd>人事イベントをWebhookで受信し、各種アカウントの発行・停止を自動実行する仕組み。承認フローを設計し、運用マニュアルを整備して承認は業務部門へ引き継いだ。</dd>
       <dt>判断</dt><dd>いきなり全自動にせず、確認運転の期間を挟んで例外パターンを洗い出してから常時自動運転へ移行した。</dd>
-      <dt>成果</dt><dd class="win">依頼ベースの手作業 → <b>人事イベント起点の自動処理</b>。属人運用から卒業。</dd>
+      <dt>成果</dt><dd class="win">依頼ベースの手作業 → <b>人事イベント起点の自動処理</b>。承認操作を業務部門へ移管し、例外時の技術対応を自分が担当する分担にした。</dd>
     </dl>
     <div class="tags"><span>GAS</span><span>Webhook</span><span>SaaS API</span></div>
+    <details class="evidence">
+      <summary>証拠と限界 — 構成・運用期間・例外・移管結果・未計測のもの</summary>
+      <div class="flow">人事SaaS（入社・退社・異動イベント）→ Webhook → 受信（GAS）→ 承認シート
+承認シート（「承認済み」の行だけを毎時実行／退職者は月次で削除処理）
+  → Google Workspace ／ ビジネスチャット ／ 名刺管理 のアカウント作成・停止・部署変更</div>
+      <dl>
+        <dt>運用期間</dt><dd>2026年6月から確認運転（受信したイベントを承認待ちに積むだけで実行しない）。この期間に不要イベントを発見して除外処理を追加し、8月5日に常時自動運転へ切替。</dd>
+        <dt>見つけた例外</dt><dd>人事SaaSが毎日同時刻に、実際の異動ではない同一148件の「更新」イベントを送ってくることが確認運転で判明（定期同期バッチ由来）。実異動と区別する処理を入れてから本番化した。</dd>
+        <dt>障害対応</dt><dd>確認運転中に実在社員148件分のイベントが承認待ちへ流入。承認済みの行しか実行しない設計のため実アカウントへの変更は起きず、バックアップを取ったうえで滞留分を除去した。</dd>
+        <dt>自分の判断</dt><dd>全自動にせず承認を挟む。誤って退職処理が走ると取り返しがつかないため、人の承認を「実行スイッチ」に置いた。</dd>
+        <dt>移管結果</dt><dd>承認操作は業務部門の担当者へ引き継ぎ、手順書を整備。自分は例外時の技術対応のみ。</dd>
+        <dt>未集計・未検証</dt><dd>未集計: 月あたりの処理件数と手動介入件数（承認シートに記録はあるが集計していない）。未検証: 自分が不在の期間の通常処理とエスカレーションの実績。未計測: 維持費と月あたりの保守時間。</dd>
+      </dl>
+    </details>
   </article>
 
   <article class="feature">
@@ -147,7 +192,7 @@ a{color:var(--accent)}
     <dl>
       <dt>課題</dt><dd>辞令の作成・人事システムへの登録が1回あたり約1時間の手作業だった。</dd>
       <dt>作ったもの</dt><dd>スプレッドシートの給与データから辞令PDFを自動生成し、人事SaaSへの登録・添付までを自動化。担当者向けの手順書つきで引き渡し。</dd>
-      <dt>成果</dt><dd class="win">約1時間/回 → <b>数分</b>。作業自体を担当者へ返せた。</dd>
+      <dt>成果</dt><dd class="win">約1時間/回 → <b>数分</b>（代表作業での本人実測。件数別・複数回の評価は未実施）。作業自体を担当者へ返せた。</dd>
     </dl>
     <div class="tags"><span>GAS</span><span>Python</span><span>人事SaaS API</span></div>
   </article>
@@ -176,11 +221,26 @@ a{color:var(--accent)}
   </div>
 </section>
 
-<section>
+<section id="code">
+  <h2>公開コード</h2>
+  <p class="sec-note">社内の成果物は出せないので、会社情報に依存しない自作ツールを公開しています。</p>
+  <div class="repo">
+    <h3><a href="https://github.com/o9mmk/ai-orchestrator">ai-orchestrator（orc）</a></h3>
+    <p>AIエージェントにコードを書かせるためのローカル orchestrator。専用 worktree・固定 budget・schema 検証・DLP・決定的な gate で囲い、「何をさせないか」を先に決めた設計。Python 3.12、テスト321本、mypy strict。</p>
+    <ul>
+      <li>代表実装: <a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/orc/sandbox.py#L165">出力上限つきの監視ループ</a>、<a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/orc/sandbox.py#L241">別スレッドのディスク増分監視</a>、<a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/orc/limit_launcher.py#L49">exec 後に上限を適用する信頼済みランチャー</a>、<a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/orc/baseline.py#L77">上限が効いていない結果を PASS にしない判定</a>（宣言済みの<a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/orc/sandbox.py#L44">プラットフォーム制約</a>を除く）</li>
+      <li>設計判断の記録: <a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/docs/design.md">最終設計</a>と、同じ要件から<a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/docs/design-review/design-a.md">案A</a>・<a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/docs/design-review/design-b.md">案B</a>を独立に起こし<a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/docs/design-review/judgement.md">比較評価</a>して決めた過程。保証の範囲と例外は <a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/README.md">README</a> に明記</li>
+      <li>相互レビューを使った品質改善の記録: <a href="https://github.com/o9mmk/ai-orchestrator/commit/0df91c8">commit 0df91c8</a>（続く<a href="https://github.com/o9mmk/ai-orchestrator/commit/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d">ce1c1d4</a> で監視の抜け道を修正）。AIが入れた修正に「資源上限の未適用を記録しても合否判定に反映しない」「報告を被検査プロセスが改ざんできる」欠陥があり、別モデルのレビューで検出。私は修正方針を4案（記録して判定へ反映／fail-closed で拒否／既知の制約として文書化のみ／公開を後回し）から比較し、未適用を隠さず判定へ反映する案を選択、差分の提示を受けて採否を判断した。実施した検証は321件のテスト・mypy strict・ruff（<a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/tests/test_sandbox.py#L129">報告の改ざん耐性</a>、<a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/tests/test_baseline.py#L249">未適用時に PASS しないこと</a>を回帰テストで固定）。未検証の範囲は README に明記</li>
+    </ul>
+  </div>
+  <p class="nm-note" style="margin-top:10px">GitHub プロフィール: <a href="https://github.com/o9mmk">github.com/o9mmk</a></p>
+</section>
+
+<section id="style">
   <h2>開発スタイル</h2>
   <p class="sec-note">「AIに書かせる」を、検証と統制で本番品質にする方法。</p>
   <div class="style3">
-    <div class="scard"><span class="no">STYLE 01</span><h3>実装はAI、判断は自分</h3><p>コードはAIエージェントに書かせ、要件定義・設計判断・レビュー・検証・運用設計に自分の時間を使う。この体制で直近2ヶ月に約230コミット・15プロジェクトを並行した（git実測）。</p></div>
+    <div class="scard"><span class="no">STYLE 01</span><h3>AIで作り、責任は自分が持つ</h3><p>コードはAIエージェントに書かせるが、設計・レビュー・本番検証・運用の責任は自分にある。公開コードでは、AIが入れた安全機構が「報告するが誰も見ない」設計だったのを別モデルの相互レビューで検出し、私が修正方針を4案から選んで差分を確認のうえ採用した。社内ポータルでは、改善案に含まれた既定値が本番で回帰を起こし、原因を特定して環境変数1箇所で暫定復旧した（事前に退けた例ではなく、採用後の障害対応）。非自明な差分は、AIの解説を読む前に自分で読んで言語化してから突き合わせる。</p></div>
     <div class="scard"><span class="no">STYLE 02</span><h3>検証してから「完了」と言う</h3><p>テスト・コミット前ゲート（秘密情報スキャン等）・AIコードレビューの多段構成。ただし最終の採否判断と実機での動作確認は必ず人間側で行う。</p></div>
     <div class="scard"><span class="no">STYLE 03</span><h3>連携経路はリスクで選ぶ</h3><p>SaaS連携は公式APIを第一選択とし、提供がない業務は影響範囲・保守性・利用条件を評価してから代替経路を設計する。動けばいい、では作らない。</p></div>
   </div>
