@@ -120,42 +120,44 @@ a{color:var(--accent)}
 <body>
 <div class="wrap">
 <header class="hero">
-  <p class="updated">PORTFOLIO — 実績更新: 2026年9月</p>
+  <p class="updated">PORTFOLIO — 実績更新: 2026年11月</p>
   <h1>業務を整理し、仕組みを作り、<br>運用まで担う。</h1>
   <p class="role">岡田 賢揮 <span>／ コーポレートエンジニア（情シス × AI活用開発）</span></p>
-  <p class="lede">従業員約220名のグループ企業で、情シスの意思決定から社内システムの開発・運用までを担当しています。コードや画面は社内資産のため非公開としているので、このページでは<em>「何が本番で動き続けているか」と「そのとき何を判断したか」</em>を一覧にしました。AIエージェントを使って開発しますが、設計・コードレビュー・本番検証・運用の責任は自分が負います。AIの案をどう検証して採否を決めているかは<a href="#style">開発スタイル</a>に、読めるコードは<a href="#code">公開コード</a>に置きました。</p>
-  <p class="want"><b>希望する役割:</b> 事業会社の社内SE／情シス／コーポレートIT／DX推進。SaaS選定から内製開発・統制までを一人で回す規模の組織が得意です。<b>副業:</b> 業務自動化・SaaS連携（GAS／Python／API）の業務整理・設計・実装・手順書まで。稼働は週5〜20時間、打合せは平日18:30以降と土日9〜19時。納品後の保守は範囲と期間を都度合意。常時運用の受託はしない。</p>
+  <p class="lede">障害福祉グループの事業会社（従業員約150名・16拠点）で、情シス・DXを一人体制で担当しています。コードや画面は社内資産のため非公開としているので、このページでは<em>「何が本番で動き続けているか」と「そのとき何を判断したか」</em>を一覧にしました。AIエージェントを使って開発しますが、設計・コードレビュー・本番検証・運用の責任は自分が負います。AIの案をどう検証して採否を決めているかは<a href="#style">開発スタイル</a>に、読めるコードは<a href="#code">公開コード</a>に置きました。</p>
+  <p class="want"><b>希望する役割:</b> 事業会社の社内SE／DX・AI推進／情シス。現場の業務を聞き取ってAIや自動化の仕組みに落とし、ルール作り・社内への定着・日々のITサポートまでを一人で回す規模の組織が得意です。<br>生成AI（Claude・ChatGPT）は業務で毎日使っています。</p>
 </header>
 
 <div class="kpis">
-  <div class="kpi"><b>60分 → 数分</b><small>給与辞令1回分の作成〜人事システム登録（代表作業での本人実測）</small></div>
-  <div class="kpi"><b>196<span style="font-size:13px"> 人/30日</span></b><small>社内ポータルのGA4ユーザー数（2026年8月9日〜9月7日・対象ホスト限定）</small></div>
+  <div class="kpi"><b>約1時間 → 数分</b><small>給与辞令1回分の作成〜人事システム登録（代表作業での本人実測）</small></div>
+  <div class="kpi"><b>196<span style="font-size:13px"> 人/30日</span></b><small>社内ナレッジ検索AI（社内ポータル）のGA4ユーザー数（2026年8月9日〜9月7日）</small></div>
   <div class="kpi"><b>手作業 → 自動</b><small>入退社アカウントの発行・停止（承認フローつき）</small></div>
-  <div class="kpi"><b>158<span style="font-size:13px"> 件</span></b><small>台帳化した全社IT資産（システム・自動化ジョブ・ツール含む）</small></div>
+  <div class="kpi"><b>約90分 → 約18分</b><small>PC1台の初期設定（スクリプト化。2026年上期に約42台）</small></div>
 </div>
 
 <section>
   <h2>本番運用の代表実績</h2>
-  <p class="sec-note">いずれも一人で企画・開発し、運用手順書と引き継ぎまで含めて維持しています（2026年9月時点）。</p>
+  <p class="sec-note">いずれも一人で企画から運用まで担当し、運用手順書を整備しています（2026年11月時点）。</p>
 
   <article class="feature">
-    <div class="head"><span class="chip run">本番稼働中</span><h3>社内ポータル ＋ 検索チャットボット</h3></div>
+    <div class="head"><span class="chip run">本番稼働中</span><h3>社内ナレッジ検索AI（社内ポータル ＋ AIチャット）</h3></div>
     <dl>
-      <dt>課題</dt><dd>社内情報が散在し、問い合わせが特定の人に集中していた。</dd>
-      <dt>作ったもの</dt><dd>社内ポータルをフルスクラッチ構築。FAQ検索と、全文検索＋LLMの回答生成を組み合わせたチャットボットを搭載。コンテンツは非エンジニアがスプレッドシートで更新できる設計。</dd>
-      <dt>判断</dt><dd>検索はベクトルDBではなく軽量な全文検索（BM25）を採用。規模に対する運用費と保守のしやすさを優先した。</dd>
-      <dt>成果</dt><dd class="win">GA4ユーザー数 <b>196人</b>・PV <b>1,724</b>（2026年8月9日〜9月7日の30日間・対象ホスト限定）。利用状況は継続計測中。</dd>
+      <dt>課題</dt><dd>規程・手順書・FAQが散在し、「どこに書いてあるか」の問い合わせが特定の人に集中していた。</dd>
+      <dt>作ったもの</dt><dd>社内資料の横断検索・FAQ・AIチャット・全社周知をまとめた社内ポータルを外注せずに構築。AIチャットは社内文書を根拠に、出典つきで回答する。お知らせとFAQは非エンジニアがスプレッドシートを編集するだけで更新できる設計にし、運用を自分に依存させない。</dd>
+      <dt>判断</dt><dd>検索は二段構成にした。短い定型のFAQはキーワード検索（BM25）で引き、規程などの長い文書はVertex AIのRAGで引く。文書の種類ごとに、精度と運用費の釣り合う方式を選んだ。</dd>
+      <dt>成果</dt><dd class="win">GA4ユーザー数 <b>196人</b>・PV <b>1,724</b>（2026年8月9日〜9月7日の30日間。グループ他社の利用を含む）。</dd>
     </dl>
-    <div class="tags"><span>Node.js</span><span>Cloud Run</span><span>Vertex AI</span><span>BM25</span><span>GA4</span></div>
+    <div class="tags"><span>Python / Flask</span><span>React</span><span>Cloud Run</span><span>Vertex AI RAG</span><span>BM25</span><span>GA4</span></div>
     <details class="evidence">
-      <summary>証拠と限界 — 構成・測定条件・障害対応・未計測のもの</summary>
+      <summary>証拠と限界 — 構成・測定条件・品質の維持・障害対応・未計測のもの</summary>
       <div class="flow">スプレッドシート（非エンジニアが更新）→ 同期ジョブ → ポータル（Cloud Run）
-検索質問 → BM25 全文検索 → 上位文書 + 質問 → LLM 回答生成 → 出典つき返答</div>
+共有フォルダの規程・手順書 → 定期同期 → RAG の検索対象
+質問 → FAQ（BM25）／ 規程（RAG）で検索 → 根拠文書 + 質問 → LLM 回答生成 → 出典つき返答</div>
       <dl>
-        <dt>測定条件</dt><dd>GA4。計測は2026年6月9日以降のみ有効（それ以前は測定設定の不備で無効扱い）。旧ポータルからの流入を除くため hostName でフィルタ。直近の30日間（2026年8月9日〜9月7日）: ユーザー196人／PV1,724。7月時点（6月9日〜7月8日）は131人／PV1,226で、利用は増加傾向。</dd>
-        <dt>運用期間</dt><dd>2026年春に本番切替、以後継続稼働。コンテンツ更新は担当部署が実施。</dd>
-        <dt>障害対応</dt><dd>7月6日の本番反映後、チャットが「聞き返しを繰り返す」回帰を起こし7月9日に発覚。改善案の一つに含まれていた生成設定の既定値が本番へそのまま入り、モデルの思考機能を無効化していたのが主因。環境変数1箇所の変更で暫定復旧し、実画面で聞き返しが止まることを確認した。検知が3日遅れたのは、本番反映後の動作確認を代表質問で行っていなかったため。構造因は検証環境と本番の既定値の不一致で、両者を揃える是正を実施済み。以後、同種の回帰は起きていない（2026年9月時点）。</dd>
-        <dt>自分の判断</dt><dd>ベクトルDBを入れない。対象は社内規程・FAQ・手順書程度の文書量で更新も月数回にとどまるため、運用費と保守のしやすさを優先した。両方式の精度・費用の比較評価は未実施。</dd>
+        <dt>測定条件</dt><dd>GA4。計測は2026年6月9日以降のみ有効（それ以前は測定設定の不備で無効扱い）。旧ポータルからの流入は除外。直近の30日間（2026年8月9日〜9月7日）: ユーザー196人／PV1,724。7月時点（6月9日〜7月8日）は131人／PV1,226で、利用は増加傾向。</dd>
+        <dt>品質の維持</dt><dd>テスト質問セットで回答の精度を定期的に自動評価している。RAGの検索対象は同期フォルダと突き合わせ、フォルダから消した古い文書を外す処理を同期に組み込んだ（2026年10月の点検で、検索対象104件のうち51件が既に消した文書の残りだったため導入）。</dd>
+        <dt>運用期間</dt><dd>2026年春に本番切替、以後継続稼働。</dd>
+        <dt>障害対応</dt><dd>本番反映後、チャットが聞き返しを繰り返す不具合が起きた。改善案に含まれていた生成設定の既定値が本番にそのまま入ったのが原因で、設定1箇所の変更で復旧し、実画面で直ったことを確認した。検証環境と本番の既定値の違いが根本にあったため、両者を揃えた。発覚まで3日かかったのは、本番反映後の確認を代表的な質問で行っていなかったため。</dd>
+        <dt>自分の判断</dt><dd>すべてをRAGに寄せない。FAQは短く言い回しも揃っているためキーワード検索で十分に当たり、運用費も軽い。RAGは長い規程文書に限って使う。二段構成と単一方式の精度・費用の比較評価は未実施。</dd>
         <dt>未計測</dt><dd>問い合わせ件数の減少、担当者の対応時間の変化、維持費と月あたりの保守時間。利用者数は取れているが、業務効果の直接指標はまだ測れていない。</dd>
       </dl>
     </details>
@@ -177,72 +179,88 @@ a{color:var(--accent)}
   → Google Workspace ／ ビジネスチャット ／ 名刺管理 のアカウント作成・停止・部署変更</div>
       <dl>
         <dt>運用期間</dt><dd>2026年6月から確認運転（受信したイベントを承認待ちに積むだけで実行しない）。この期間に不要イベントを発見して除外処理を追加し、8月5日に常時自動運転へ切替。</dd>
-        <dt>見つけた例外</dt><dd>人事SaaSが毎日同時刻に、実際の異動ではない同一148件の「更新」イベントを送ってくることが確認運転で判明（定期同期バッチ由来）。実異動と区別する処理を入れてから本番化した。本番化後も、1名の退職イベントが日次で17回再送される事象を観測しており、重複の吸収は承認側で行っている。</dd>
-        <dt>障害対応</dt><dd>確認運転中に実在社員148件分のイベントが承認待ちへ流入。承認済みの行しか実行しない設計のため実アカウントへの変更は起きず、バックアップを取ったうえで滞留分を除去した。</dd>
+        <dt>見つけた例外</dt><dd>人事SaaSが毎日同時刻に、実際の異動ではない同一148件の「更新」イベントを送ってくることが確認運転で判明（定期同期バッチ由来）。承認済みの行しか実行しない設計のため実アカウントへの変更は起きず、実異動と区別する処理を入れてから本番化した。</dd>
         <dt>自分の判断</dt><dd>全自動にせず承認を挟む。誤って退職処理が走ると取り返しがつかないため、人の承認を「実行スイッチ」に置いた。</dd>
         <dt>移管結果</dt><dd>承認操作は業務部門の担当者へ引き継ぎ、手順書を整備。自分は例外時の技術対応のみ。</dd>
-        <dt>処理実績</dt><dd>2026年7月23日〜9月1日（約6週間、常時自動運転への切替を含む）: 受信51行、人事SaaS側の再送による重複を除いた実イベント35件。自動完了22件（入社8・異動8・情報変更1・退職5）、手動介入2件（ライセンス上限で保留→座席追加後に再実行、既に手動停止済みだった退職者の台帳整合）、連携エラー2件（入社直後の部署確定イベント）、承認待ち11件（うち8件は会社アカウントを持たない非常勤の退職で台帳更新のみ）。承認シートから集計。</dd>
+        <dt>処理実績</dt><dd>2026年7月23日〜9月1日（約6週間、常時自動運転への切替を含む）: 重複を除いた実イベント35件のうち22件が自動完了。残りは手動での対応や承認待ち。承認シートから集計。</dd>
         <dt>未検証・未計測</dt><dd>未検証: 自分が不在の期間の通常処理とエスカレーションの実績。未計測: 維持費と月あたりの保守時間。</dd>
       </dl>
     </details>
   </article>
 
   <article class="feature">
+    <div class="head"><span class="chip run">運用中</span><h3>業務データから経営指標を自動集計</h3></div>
+    <dl>
+      <dt>課題</dt><dd>事業所ごとの利用実績・請求データは外部の業務SaaSの中にあり、経営判断に使う指標は人が帳票を見て拾っていた。</dd>
+      <dt>作ったもの</dt><dd>業務SaaSから読み取り専用でデータを取得するツールを作り、過去27ヶ月分の帳票を構造化。23事業所（2026年9月に25事業所へ拡大）の週次・月次の経営指標をクラウド上で自動集計し、週次の配信と月次報告書の生成まで自動化した。</dd>
+      <dt>判断</dt><dd>正本は外部SaaSに置いたまま、本番データを書き換えない経路だけを使う。利用者の個人情報は生成AIに渡さない。事業所を追加するときは、既存の事業所と過去月の数字が変わらないことを本番相当のテスト実行（25事業所×2か月分）で確かめてから反映した。</dd>
+      <dt>成果</dt><dd class="win">週次指標の自動配信と<b>月次報告書の自動生成</b>が稼働中。</dd>
+    </dl>
+    <div class="tags"><span>Python</span><span>Google Cloud</span><span>読み取り専用連携</span></div>
+  </article>
+
+  <article class="feature">
     <div class="head"><span class="chip run">運用中</span><h3>給与辞令の自動生成 〜 人事システム連携</h3></div>
     <dl>
       <dt>課題</dt><dd>辞令の作成・人事システムへの登録が1回あたり約1時間の手作業だった。</dd>
-      <dt>作ったもの</dt><dd>スプレッドシートの給与データから辞令PDFを自動生成し、人事SaaSへの登録・添付までを自動化。担当者向けの手順書つきで引き渡し。</dd>
-      <dt>成果</dt><dd class="win">約1時間/回 → <b>数分</b>（代表作業での本人実測。件数別・複数回の評価は未実施）。作業自体を担当者へ返せた。</dd>
+      <dt>作ったもの</dt><dd>スプレッドシートの給与データから辞令PDFを自動生成し、人事SaaSへの登録・添付までを自動化。担当者向けの手順書も整備。</dd>
+      <dt>成果</dt><dd class="win">約1時間/回 → <b>数分</b>（代表作業での本人実測。件数別・複数回の評価は未実施）。</dd>
     </dl>
     <div class="tags"><span>GAS</span><span>Python</span><span>人事SaaS API</span></div>
   </article>
 </section>
 
 <section>
-  <h2>その他の稼働システム・検証</h2>
+  <h2>生成AIを社内に入れる仕事</h2>
+  <p class="sec-note">作った仕組みを「使ってもらえる」「安全に使える」状態にするまでが仕事だと考えています。</p>
   <div class="ledger">
-    <div class="row"><div class="nm">IT資産の棚卸し自動突合</div><p>定期実行ジョブ・クラウドサービス・ツール類158件の構成と稼働情報を機械実測で突合し、確認が必要な資産を可視化。台帳とダッシュボードで管理。</p></div>
-    <div class="row"><div class="nm">組織マスタのSaaS間突合</div><p>名刺管理・人事・グループウェアに散らばる部署マスタを一括是正し、日次の自動突合で不整合を検知。</p></div>
-    <div class="row"><div class="nm">依頼のタスク自動起票</div><p>チャットで受けた自分宛の依頼をLLMが行動形タスクへ変換して起票。対応漏れを防ぐ運用を支援。</p></div>
-    <div class="row"><div class="nm">PCキッティング自動化</div><p>セットアップをスクリプト化し、設定値の正本を一元管理。誰が実行しても同じ状態に仕上がる。</p></div>
-    <div class="row"><div class="nm">経営層向けSNS草稿の週次生成</div><p>投稿草稿を週次で自動生成し、担当者へ配信。最終判断は人が行う運用設計。</p></div>
-    <div class="row"><div class="nm">Web会議の議事録自動化<span class="chip poc">PoC</span></div><p>録画機能がないプラン環境向けに、音声取得〜文字起こし〜議事録生成を自作し実証。話者識別は段階的フォールバック設計。</p></div>
+    <div class="row"><div class="nm">利用ルールの策定</div><p>社内ITセキュリティガイドラインと生成AI利用ルールを策定して経営承認を得て、会社標準AIを選定した（社員が会社の把握していないAIを使う「シャドウAI」への対策）。</p></div>
+    <div class="row"><div class="nm">社内研修の内製</div><p>新入社員向けのDX研修を、ビジネスマナー研修とあわせて教材から内製した。</p></div>
+    <div class="row"><div class="nm">現場の声で止める判断</div><p>全16拠点への朝礼URL自動配信は、テスト初日に現場から運用への影響を指摘され、即日全停止して要件定義に戻した。自動化は現場の運用に合ってはじめて定着する。</p></div>
+    <div class="row"><div class="nm">AIで開発するときの統制</div><p>生成AI（Claude Code／Codex）を使った内製開発に、秘密情報の混入を防ぐコミット前の自動検査、権限制御、AIによる多段レビュー、利用量の監視を入れた。本番反映は自分の動作確認を経てから。</p></div>
   </div>
 </section>
 
 <section>
-  <h2>意思決定と統制の仕事</h2>
-  <p class="sec-note">作るだけでなく、「買う・任せる・止める・守る」の判断も担当しています。</p>
+  <h2>社内IT基盤とサポート</h2>
+  <p class="sec-note">開発だけでなく、Microsoft 365・ネットワーク・ヘルプデスク・障害対応も一人で担当しています。</p>
   <div class="ledger">
-    <div class="row"><div class="nm">ベンダー・予算判断</div><p>年間数百万円規模の外部委託（請求業務）と百万円超のSaaS更新費について、内製化した場合のコストとリスクを試算して継続／内製を判断。判断対象を合算すると年間約850万円規模。作れるものでも業務停止リスクが利益を上回るなら内製しない、という判断を含む。</p></div>
-    <div class="row"><div class="nm">契約の見直し</div><p>端末管理ツール（約220台分）のリプレースを主導。要件を「役員の操作ログ」「AI利用規制」の2本柱に整理し、複数製品の比較と台あたり単価の試算まで実施。選定段階。</p></div>
-    <div class="row"><div class="nm">全社セキュリティ監査</div><p>クラウドストレージの共有権限を全社監査して是正し、以後は週次の自動監査で維持。</p></div>
-    <div class="row"><div class="nm">AI利用の統制</div><p>ITセキュリティガイドラインと生成AI利用ルールを制定し、会社標準AIを選定。エージェント運用基盤（コミット前の機械検査・多段レビュー・権限制御）を設計。「使う側」と「安全に使わせる側」の両輪。</p></div>
-    <div class="row"><div class="nm">現地インフラの内製（10拠点超）</div><p>本社回線切替をネットワークベンダーと協働で主導し、旧2回線の解約まで完了。プロバイダ切替では全事業所のネットワーク停止日時を各拠点と調整して工事を進行。拠点Wi-Fi不調はルーター側か回線側かを切り分けてからベンダー訪問を手配。ベンダー提案の配線工事（約5万円）は現地調査のうえ自前のLANハブ増設で代替し、防犯カメラの画角変更も見積を取らずに現地対応。外国人材の住居向けポケットWi-Fiの選定・見積・決裁取得。</p></div>
-    <div class="row"><div class="nm">全社イベントの配信統括</div><p>中期経営発表（2026年9月・会場＋Zoom配信）の映像・音声ライン、ホスト構成、機材と役割分担、当日チェックを設計し、発表者5名分の資料制作と当日運営を統括。</p></div>
+    <div class="row"><div class="nm">Microsoft 365 の契約と構成</div><p>利用実態から Apps for business を基本とする構成を決め、初期17ライセンスの契約から2回の追加発注までを担当。</p></div>
+    <div class="row"><div class="nm">問い合わせ窓口の再設計</div><p>個人チャットへの直接相談で見落としと属人化が起きていた問い合わせ経路を、「施設長 → 相談用グループ → ワークフロー申請」の3段に統一。各拠点のPCに詳しいスタッフも窓口に加えて負担の集中を分散した（現在も全社の標準経路）。</p></div>
+    <div class="row"><div class="nm">ネットワーク（10拠点）</div><p>本社回線の切替を主導し、旧2回線の解約まで完了。10拠点のネットワーク作業は、各拠点の停止可能日時を集めてベンダーと全日程を確定した。ベンダー提案の配線工事（約5万円）は現地調査のうえ自前のLANハブ増設で代替した。</p></div>
+    <div class="row"><div class="nm">障害対応とデータ保全</div><p>旧基幹DBが使えなくなった障害では、影響範囲・法令上の保存義務（5年）・業務継続策・再発防止案を2日で意思決定資料にまとめて経営会議へ提出。市販ツールで開けない旧バックアップを読み取り、5つのDBと添付973件（約908MB）を保全した。</p></div>
+    <div class="row"><div class="nm">現場の業務シート障害</div><p>管理権限のない他拠点所有の業務シートが動かなくなった件で、原因を回答データの肥大（約15万行で関数の処理限界を超過）と特定。所有拠点と上長へ依頼事項を示して約2.4万行へ整理し復旧、月次アーカイブの手順書を付けて現場へ移管した。</p></div>
+    <div class="row"><div class="nm">全社PC棚卸し</div><p>拠点別の未回答台数を示して督促し、回答率を約47% → 約69%へ引き上げた。</p></div>
   </div>
 </section>
 
-<section id="code">
-  <h2>公開コード</h2>
-  <p class="sec-note">社内の成果物は出せないので、会社情報に依存しない自作ツールを公開しています。</p>
-  <div class="repo">
-    <h3><a href="https://github.com/o9mmk/ai-orchestrator">ai-orchestrator（orc）</a></h3>
-    <p>AIエージェントにコードを書かせるためのローカル orchestrator。専用 worktree・固定 budget・schema 検証・DLP・決定的な gate で囲い、「何をさせないか」を先に決めた設計。Python 3.12、テスト321本、mypy strict。</p>
-    <ul>
-      <li>代表実装: <a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/orc/sandbox.py#L165">出力上限つきの監視ループ</a>、<a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/orc/sandbox.py#L241">別スレッドのディスク増分監視</a>、<a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/orc/limit_launcher.py#L49">exec 後に上限を適用する信頼済みランチャー</a>、<a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/orc/baseline.py#L77">上限が効いていない結果を PASS にしない判定</a>（宣言済みの<a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/orc/sandbox.py#L44">プラットフォーム制約</a>を除く）</li>
-      <li>設計判断の記録: <a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/docs/design.md">最終設計</a>と、同じ要件から<a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/docs/design-review/design-a.md">案A</a>・<a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/docs/design-review/design-b.md">案B</a>を独立に起こし<a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/docs/design-review/judgement.md">比較評価</a>して決めた過程。保証の範囲と例外は <a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/README.md">README</a> に明記</li>
-      <li>相互レビューを使った品質改善の記録: <a href="https://github.com/o9mmk/ai-orchestrator/commit/0df91c8">commit 0df91c8</a>（続く<a href="https://github.com/o9mmk/ai-orchestrator/commit/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d">ce1c1d4</a> で監視の抜け道を修正）。AIが入れた修正に「資源上限の未適用を記録しても合否判定に反映しない」「報告を被検査プロセスが改ざんできる」欠陥があり、別モデルのレビューで検出。私は修正方針を4案（記録して判定へ反映／fail-closed で拒否／既知の制約として文書化のみ／公開を後回し）から比較し、未適用を隠さず判定へ反映する案を選択、差分の提示を受けて採否を判断した。実施した検証は321件のテスト・mypy strict・ruff（<a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/tests/test_sandbox.py#L129">報告の改ざん耐性</a>、<a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/tests/test_baseline.py#L249">未適用時に PASS しないこと</a>を回帰テストで固定）。未検証の範囲は README に明記</li>
-    </ul>
+<section>
+  <h2>判断材料を作る仕事</h2>
+  <p class="sec-note">作るだけでなく、「買う・任せる・止める」を決めるための試算と提案も担当しています。</p>
+  <div class="ledger">
+    <div class="row"><div class="nm">ベンダー・予算判断</div><p>年間数百万円規模の外部委託（請求業務）と百万円超のシステム更新費について、内製化した場合の費用とリスクを試算し、経営判断の材料を提示した。請求業務は、作れるとしても業務停止リスクが利益を上回るとして委託継続で決着。</p></div>
+    <div class="row"><div class="nm">契約の見直し</div><p>IT資産管理ツールの契約見直しで、要件を「操作ログの取得」「AI利用の制限」の2本柱に整理し、複数製品を比較して台あたり単価を試算した（選定段階）。</p></div>
+    <div class="row"><div class="nm">共有権限の自動監査</div><p>クラウドストレージの共有権限を自動で監査する処理を作り、定期実行している。</p></div>
   </div>
-  <p class="nm-note" style="margin-top:10px">GitHub プロフィール: <a href="https://github.com/o9mmk">github.com/o9mmk</a></p>
+</section>
+
+<section>
+  <h2>その他の稼働システム・検証</h2>
+  <div class="ledger">
+    <div class="row"><div class="nm">IT資産の棚卸し</div><p>全社のIT資産158件を台帳にまとめ、実機との突き合わせを自動化した。</p></div>
+    <div class="row"><div class="nm">組織マスタのSaaS間突合</div><p>名刺管理・人事・グループウェアに散らばる部署情報を一括で修正し、不一致を検知する突合処理を作った。</p></div>
+    <div class="row"><div class="nm">PCキッティング自動化</div><p>セットアップをPowerShellでスクリプト化し、約90分/台 → 約18分/台に短縮（2026年上期に約42台へ適用）。設定値の正本を一元管理し、誰が実行しても同じ状態に仕上がる。</p></div>
+    <div class="row"><div class="nm">行政監査に備えた報告書アーカイブ</div><p>報告書システムから報告書PDFを自動で回収し、年度別に探せる形で保管（期間内921件のうち901件）。</p></div>
+    <div class="row"><div class="nm">経営層向けSNS草稿の週次生成</div><p>投稿草稿を週次で自動生成し、担当者へ配信。最終判断は人が行う運用設計。</p></div>
+    <div class="row"><div class="nm">Web会議の議事録自動化<span class="chip poc">PoC</span></div><p>録画機能がないプラン環境向けに、音声取得〜文字起こし〜議事録生成を自作し実証。</p></div>
+  </div>
 </section>
 
 <section id="style">
   <h2>開発スタイル</h2>
   <p class="sec-note">「AIに書かせる」を、検証と統制で本番品質にする方法。</p>
   <div class="style3">
-    <div class="scard"><span class="no">STYLE 01</span><h3>AIで作り、責任は自分が持つ</h3><p>コードはAIエージェントに書かせるが、設計・レビュー・本番検証・運用の責任は自分にある。公開コードでは、AIが入れた安全機構が「報告するが誰も見ない」設計だったのを別モデルの相互レビューで検出し、私が修正方針を4案から選んで差分を確認のうえ採用した。社内ポータルでは、改善案に含まれた既定値が本番で回帰を起こし、原因を特定して環境変数1箇所で暫定復旧した（事前に退けた例ではなく、採用後の障害対応）。非自明な差分は、AIの解説を読む前に自分で読んで言語化してから突き合わせる。</p></div>
+    <div class="scard"><span class="no">STYLE 01</span><h3>AIで作り、責任は自分が持つ</h3><p>コードはAIエージェントに書かせるが、設計・レビュー・本番検証・運用の責任は自分にある。公開コードでは、AIが入れた安全機構が「報告するが誰も見ない」設計だったのを別モデルの相互レビューで検出し、私が修正方針を4案から選んで差分を確認のうえ採用した。社内ポータルでは、改善案に含まれた既定値が本番で回帰を起こし、原因を特定して環境変数1箇所で暫定復旧した。非自明な差分は、AIの解説を読む前に自分で読んで言語化してから突き合わせる。</p></div>
     <div class="scard"><span class="no">STYLE 02</span><h3>検証してから「完了」と言う</h3><p>テスト・コミット前ゲート（秘密情報スキャン等）・AIコードレビューの多段構成。ただし最終の採否判断と実機での動作確認は必ず人間側で行う。</p></div>
     <div class="scard"><span class="no">STYLE 03</span><h3>連携経路はリスクで選ぶ</h3><p>SaaS連携は公式APIを第一選択とし、提供がない業務は影響範囲・保守性・利用条件を評価してから代替経路を設計する。動けばいい、では作らない。</p></div>
   </div>
@@ -251,10 +269,26 @@ a{color:var(--accent)}
 <section>
   <h2>経歴</h2>
   <div class="timeline">
-    <div class="tstop now"><div class="when">2025.11 —</div><div class="what">障害福祉グループ企業 ／ 業務推進DX担当（情シス）</div><p>SaaS選定の意思決定〜内製開発〜AI活用基盤〜セキュリティ統制まで一気通貫で担当。</p></div>
+    <div class="tstop now"><div class="when">2025.11 —</div><div class="what">障害福祉グループ企業 ／ 業務推進DX担当（情シス）</div><p>大阪本社の情シス・DX機能を一人体制で担当。SaaS選定の判断材料づくり〜内製開発〜生成AIの導入と統制〜ヘルプデスク・現地インフラまで一気通貫。</p></div>
     <div class="tstop"><div class="when">2022.10 — 2025.4</div><div class="what">ITサービス企業 ／ インフラエンジニア</div><p>クライアントPC運用・オンサイト対応、Azure（Entra ID権限管理・AVD構築運用）。AZ-900取得。</p></div>
+    <div class="tstop"><div class="when">2022.5 — 2022.9</div><div class="what">IT企業 ／ モバイル機器サポート窓口（派遣・期間満了）</div><p>操作方法・トラブルシューティングの問い合わせの受付と1次対応。</p></div>
     <div class="tstop"><div class="when">2018.2 — 2022.5</div><div class="what">携帯キャリアショップ ／ 販売 → 店長</div><p>店舗成績を全国30位・地区2〜3位へ。個人販売実績で社内歴代1位（当時）。数字で語る折衝力の原点。</p></div>
   </div>
+</section>
+
+<section id="code">
+  <h2>公開コード</h2>
+  <p class="sec-note">社内の成果物は出せないので、会社情報に依存しない自作ツールを公開しています。</p>
+  <div class="repo">
+    <h3><a href="https://github.com/o9mmk/ai-orchestrator">ai-orchestrator（orc）</a></h3>
+    <p>AIエージェントにコードを書かせるためのローカル orchestrator。AIに作業させるときに「やってはいけないこと」を先に機械的に縛る設計です。技術的な詳細は GitHub にあります（Python 3.12、テスト321件、mypy strict）。</p>
+    <ul>
+      <li>代表実装: <a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/orc/sandbox.py#L165">出力上限つきの監視ループ</a>、<a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/orc/sandbox.py#L241">別スレッドのディスク増分監視</a>、<a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/orc/limit_launcher.py#L49">exec 後に上限を適用する信頼済みランチャー</a>、<a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/orc/baseline.py#L77">上限が効いていない結果を PASS にしない判定</a>（宣言済みの<a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/orc/sandbox.py#L44">プラットフォーム制約</a>を除く）</li>
+      <li>設計判断の記録: <a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/docs/design.md">最終設計</a>と、同じ要件から<a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/docs/design-review/design-a.md">案A</a>・<a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/docs/design-review/design-b.md">案B</a>を独立に起こし<a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/docs/design-review/judgement.md">比較評価</a>して決めた過程。保証の範囲と例外は <a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/README.md">README</a> に明記</li>
+      <li>相互レビューを使った品質改善の記録: <a href="https://github.com/o9mmk/ai-orchestrator/commit/0df91c8">commit 0df91c8</a>（続く <a href="https://github.com/o9mmk/ai-orchestrator/commit/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d">ce1c1d4</a> で監視の抜け道を修正）。AIが入れた修正に「資源上限の未適用を記録しても合否判定に反映しない」「報告を被検査プロセスが改ざんできる」欠陥があり、別モデルのレビューで検出。私は修正方針を4案（記録して判定へ反映／fail-closed で拒否／既知の制約として文書化のみ／公開を後回し）から比較し、未適用を隠さず判定へ反映する案を選択、差分の提示を受けて採否を判断した。実施した検証は321件のテスト・mypy strict・ruff（<a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/tests/test_sandbox.py#L129">報告の改ざん耐性</a>、<a href="https://github.com/o9mmk/ai-orchestrator/blob/ce1c1d4948f81b2d0631e0158fb3c1486ca1f17d/tests/test_baseline.py#L249">未適用時に PASS しないこと</a>を回帰テストで固定）。未検証の範囲は README に明記</li>
+    </ul>
+  </div>
+  <p class="nm-note" style="margin-top:10px">GitHub プロフィール: <a href="https://github.com/o9mmk">github.com/o9mmk</a></p>
 </section>
 
 <footer>
