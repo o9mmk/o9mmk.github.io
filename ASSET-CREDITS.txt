@@ -1,0 +1,27 @@
+Portfolio asset credits
+
+3D exterior: Stratocaster by varin
+https://sketchfab.com/3d-models/stratocaster-2a29975b708b4106a84d5b51e3ede608
+License: Creative Commons Attribution 4.0 International
+https://creativecommons.org/licenses/by/4.0/
+Displayed through Sketchfab's official hosted viewer. Model geometry is unchanged.
+Presentation changes: camera path, transparent background, vignette disabled.
+Sketchfab branding is retained. No model file is redistributed in this repository.
+
+Interior: independently authored, simplified educational cutaway.
+It is not a scan or an exact representation of the varin model's interior.
+
+Studio Small 09 HDR: Sergej Majboroda / Poly Haven (CC0)
+https://polyhaven.com/a/studio_small_09
+Fine Grained Wood: Rob Tuytel / Poly Haven (CC0)
+https://polyhaven.com/a/fine_grained_wood
+https://polyhaven.com/license
+
+Photographic-style studio/pedal/workbench images: generated for this portfolio.
+These images do not depict the owner's equipment or workplace.
+
+Three.js: MIT, loaded from jsDelivr (version 0.187.0 via import map).
+https://github.com/mrdoob/three.js/blob/master/LICENSE
+Fonts are served by Google Fonts.
+
+No affiliation with, or endorsement by, guitar manufacturers is implied.

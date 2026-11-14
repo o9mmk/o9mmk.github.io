@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ja"><head><meta name="robots" content="noindex"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="岡田賢揮のポートフォリオ。情シス・DXの設計、受入検証、運用。仕組みをつくる、その前と後の仕事。">
+<meta name="theme-color" content="#f5f8fa"><title>旧データベースの保全 — 岡田 賢揮</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="portfolio-site.css"><link rel="stylesheet" href="portfolio-content.css"><link rel="stylesheet" href="portfolio-cases.css">
+<script src="portfolio-site.js" defer></script></head><body id="top" class="detail-page"><a class="skip" href="#main">本文へ</a><header class="site-header glass"><a class="brand" href="fable-rock.html" aria-label="岡田賢揮 ホーム"><span class="string-mark" aria-hidden="true">≋</span><span>KENKI OKADA<small>IT / DX ENGINEERING</small></span></a>
+<nav aria-label="メイン"><a href="fable-rock.html#work" aria-current="page">仕事</a><a href="fable-rock.html#approach">考え方</a><a href="fable-rock.html#profile">プロフィール</a><a class="nav-reel" href="index.html?mode=reel&amp;motion=1">3D版 <span aria-hidden="true">↗</span></a><button class="glass-toggle" type="button" aria-pressed="false" hidden>透明感 <span>OFF</span></button></nav></header><main id="main"><div class="detail-intro container"><a class="text-link" href="fable-rock.html#work">← 仕事の一覧へ</a><p class="eyebrow">CASE STUDY / 03</p></div><div class="detail-photo container"><img src="assets/workbench-daylight.png" alt="フレットと弦を確かめるギター作業台のイメージ" width="1536" height="1024"></div><article class="case wrap" id="recovery" aria-labelledby="c3">
+  <div class="fretline">
+    <span class="no">03</span><span class="en" aria-hidden="true">BACKUP</span>
+    <p class="meta">障害対応・データ検証｜2026年7月</p>
+  </div>
+
+  <div class="case-open">
+    <div class="lead">
+      <h1 id="c3">旧データベースの保全</h1>
+      <p>2026年7月、外部サーバーの廃止で、旧基幹データベースに接続できなくなりました。残っていたのは、市販ツールでは開けない旧バックアップ。そこからデータを読み取り、保全して、元の件数と照合するところまでを担当しました。</p>
+    </div>
+    <p class="thesis"><span>取り出す。</span><span>そして、照合する。</span></p>
+    <p class="proof run big"><b>2</b>日で、役員会議へ判断材料を提出。<small>影響範囲、データの保存要件、業務を続けるための対応、再発防止案を整理しました。</small></p>
+  </div>
+
+  <div class="flow">
+    <p class="cap">保全の流れ</p>
+    <ol class="chain" style="--n:4">
+      <li><b>旧バックアップを読み取る</b><span>市販ツールでは開けなかった</span></li>
+      <li><b>データベースを表形式へ変換</b><span>5つのデータベース</span></li>
+      <li><b>添付ファイルを取り出す</b><span>973件・合計 約908MB</span></li>
+      <li><b>元の画面の件数と照合</b><span>取り出して終わりにしない</span></li>
+    </ol>
+  </div>
+
+  <figure class="tally">
+    <svg viewBox="0 0 560 336" role="img" aria-label="保全したデータの量を表す図。枠5つがデータベース5つ、線973本が添付ファイル973件">
+      <defs>
+        <pattern id="tk" width="10" height="16" patternUnits="userSpaceOnUse">
+          <rect x="4" y="2" width="1.7" height="12" fill="#376c87"/>
+        </pattern>
+      </defs>
+      <g fill="none" stroke="#203b4a" stroke-width="1.5">
+        <rect x=".75" y=".75" width="102.5" height="28.5"/>
+        <rect x="114.75" y=".75" width="102.5" height="28.5"/>
+        <rect x="228.75" y=".75" width="102.5" height="28.5"/>
+        <rect x="342.75" y=".75" width="102.5" height="28.5"/>
+        <rect x="456.75" y=".75" width="102.5" height="28.5"/>
+      </g>
+      <rect y="48" width="560" height="272" fill="url(#tk)"/>
+      <rect y="320" width="210" height="16" fill="url(#tk)"/>
+    </svg>
+    <figcaption>
+      <p class="run">データベース<b>5</b>つ、添付ファイル<b>973</b>件、合計 約<b>908</b>MB。</p>
+      <p class="fine">枠ひとつがデータベースひとつ、線1本が添付ファイル1件。取り出したあと、元の画面の件数と照合しました。</p>
+    </figcaption>
+  </figure>
+
+  <p class="caveat">対応範囲は、データの保全と照合です。旧システム全体の復旧ではありません。また「2日」は、役員会議へ判断材料を提出するまでの日数で、データ保全全体の所要日数ではありません。</p>
+
+  <dl class="scope">
+    <div><dt>私</dt><dd>状況整理・保全対応・照合・役員会議への報告</dd></div>
+    <div><dt>状況</dt><dd>旧基幹DBに接続不能</dd></div>
+  </dl>
+</article><nav class="case-navigation container" aria-label="実績の移動"><a class="text-link" href="fable-rock.html#work">← すべての仕事</a><a href="work-accounts.html"><small>NEXT / 01 / CONNECTION</small><strong>入退社アカウントの発行・停止 <span aria-hidden="true">↗</span></strong></a></nav></main><footer class="site-footer container"><div><a class="footer-name" href="fable-rock.html">KENKI OKADA</a><p>情シス・DX ／ 設計・受入検証・運用</p></div><a href="#top" class="text-link">先頭へ ↑</a><p class="credits">掲載内容は2026年11月時点。写真風のビジュアルはAI生成によるイメージで、本人の機材・職場ではありません。3D版の外観はvarin作「Stratocaster」をSketchfab公式ビューアで表示し、背景・カメラ・画面効果を調整しています。内部は自作の簡略モデルです。 <a href="https://sketchfab.com/3d-models/stratocaster-2a29975b708b4106a84d5b51e3ede608" target="_blank" rel="noreferrer">Stratocaster — varin</a> / <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>。</p></footer></body></html>

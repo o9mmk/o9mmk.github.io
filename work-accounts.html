@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ja"><head><meta name="robots" content="noindex"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="岡田賢揮のポートフォリオ。情シス・DXの設計、受入検証、運用。仕組みをつくる、その前と後の仕事。">
+<meta name="theme-color" content="#f5f8fa"><title>入退社アカウントの発行・停止 — 岡田 賢揮</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="portfolio-site.css"><link rel="stylesheet" href="portfolio-content.css"><link rel="stylesheet" href="portfolio-cases.css">
+<script src="portfolio-site.js" defer></script></head><body id="top" class="detail-page"><a class="skip" href="#main">本文へ</a><header class="site-header glass"><a class="brand" href="fable-rock.html" aria-label="岡田賢揮 ホーム"><span class="string-mark" aria-hidden="true">≋</span><span>KENKI OKADA<small>IT / DX ENGINEERING</small></span></a>
+<nav aria-label="メイン"><a href="fable-rock.html#work" aria-current="page">仕事</a><a href="fable-rock.html#approach">考え方</a><a href="fable-rock.html#profile">プロフィール</a><a class="nav-reel" href="index.html?mode=reel&amp;motion=1">3D版 <span aria-hidden="true">↗</span></a><button class="glass-toggle" type="button" aria-pressed="false" hidden>透明感 <span>OFF</span></button></nav></header><main id="main"><div class="detail-intro container"><a class="text-link" href="fable-rock.html#work">← 仕事の一覧へ</a><p class="eyebrow">CASE STUDY / 01</p></div><div class="detail-photo container"><img src="assets/pedals-daylight.png" alt="パッチケーブルで接続した3台のエフェクターのイメージ" width="1536" height="1024"></div><article class="case wrap" id="accounts" aria-labelledby="c1">
+  <div class="fretline">
+    <span class="no">01</span><span class="en" aria-hidden="true">ACCOUNTS</span>
+    <p class="meta">業務連携｜2026年8月から常時稼働</p>
+  </div>
+
+  <div class="case-open">
+    <div class="lead">
+      <h1 id="c1">入退社アカウントの発行・停止</h1>
+      <p>入退社のたびに依頼を受け、Google Workspace・LINE WORKS・Sansanのアカウントを手作業で発行・停止していました。これを、人事システムへの登録を起点に、業務部門の承認を経てから動く仕組みへ置き換えました。</p>
+    </div>
+    <p class="thesis"><span>動かす前に、</span><span>人の判断を挟む。</span></p>
+    <p class="proof run big">自動テスト<b>142</b>件と、約<b>5</b>週間のテスト運用を経て本番へ。移行後、約<b>20</b>名分を処理。<small>2026年11月時点</small></p>
+  </div>
+
+  <figure class="circuit">
+    <figcaption class="cap">登録から実行まで — 承認が、操作の境界になる</figcaption>
+    <div class="cx">
+      <div class="a a1" aria-hidden="true"><i class="node"></i><i class="wire"></i></div>
+      <div class="t t1">
+        <p class="k">登録</p>
+        <h2>カオナビに登録する</h2>
+        <p>人事システムへの登録が起点。この時点では、実アカウントを変更しません。</p>
+      </div>
+      <div class="a a2" aria-hidden="true">
+        <svg class="sw" viewBox="0 0 132 80" width="132" height="80">
+          <path d="M0 40H12" stroke="#203b4a" stroke-width="1.5"/>
+          <path d="M120 40H132" stroke="#657f8b" stroke-width="1.5"/>
+          <path d="M18 40L106 11" stroke="#376c87" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="18" cy="40" r="5.5" fill="#0c0b0a" stroke="#376c87" stroke-width="2"/>
+          <circle cx="114" cy="40" r="5.5" fill="#0c0b0a" stroke="#376c87" stroke-width="2"/>
+        </svg>
+        <i class="wire off"></i>
+      </div>
+      <div class="t t2">
+        <p class="k">承認</p>
+        <h2>業務部門が承認する</h2>
+        <p>承認するまで、実アカウントには触れない。回路は、ここで開いたままです。</p>
+      </div>
+      <div class="a a3">
+        <svg class="fork" viewBox="0 0 72 132" width="72" height="132" aria-hidden="true">
+          <path d="M0 66H30M30 22V110M30 22H72M30 66H72M30 110H72" fill="none" stroke="#657f8b" stroke-width="1.5" stroke-dasharray="4 5"/>
+        </svg>
+        <ul class="outs">
+          <li>Google Workspace</li>
+          <li>LINE WORKS</li>
+          <li>Sansan</li>
+        </ul>
+      </div>
+      <div class="t t3">
+        <p class="k">実行</p>
+        <h2>3サービスで発行・停止</h2>
+        <p>承認された分だけ、アカウントの発行・停止が動きます。</p>
+      </div>
+    </div>
+  </figure>
+
+  <div class="notes">
+    <section>
+      <h2>テスト運用から、本番へ移す。</h2>
+      <p>テスト運用中は、関係者に手作業での発行を控えてもらい、二重発行を防ぎました。自動テストと受入検証を経て本番へ移行。承認作業は、運用マニュアルを付けて業務部門へ渡しています。</p>
+    </section>
+    <section>
+      <h2>エラーの原因を、実データで確かめる。</h2>
+      <p>Sansanの停止が初回にAPIエラーになったときは、原因を実データで確定して修正。10名の停止を完了しました。</p>
+    </section>
+  </div>
+
+  <dl class="scope">
+    <div><dt>私</dt><dd>設計・受入検証・移管</dd></div>
+    <div><dt>業務部門</dt><dd>承認</dd></div>
+    <div><dt>AI</dt><dd>コード生成・コードレビュー</dd></div>
+    <div><dt>対象</dt><dd>3つのサービス</dd></div>
+  </dl>
+</article><nav class="case-navigation container" aria-label="実績の移動"><a class="text-link" href="fable-rock.html#work">← すべての仕事</a><a href="work-portal.html"><small>NEXT / 02 / FINDABILITY</small><strong>社内ポータルとAIチャット <span aria-hidden="true">↗</span></strong></a></nav></main><footer class="site-footer container"><div><a class="footer-name" href="fable-rock.html">KENKI OKADA</a><p>情シス・DX ／ 設計・受入検証・運用</p></div><a href="#top" class="text-link">先頭へ ↑</a><p class="credits">掲載内容は2026年11月時点。写真風のビジュアルはAI生成によるイメージで、本人の機材・職場ではありません。3D版の外観はvarin作「Stratocaster」をSketchfab公式ビューアで表示し、背景・カメラ・画面効果を調整しています。内部は自作の簡略モデルです。 <a href="https://sketchfab.com/3d-models/stratocaster-2a29975b708b4106a84d5b51e3ede608" target="_blank" rel="noreferrer">Stratocaster — varin</a> / <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>。</p></footer></body></html>
