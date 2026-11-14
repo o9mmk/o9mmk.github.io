@@ -7,6 +7,10 @@ https://creativecommons.org/licenses/by/4.0/
 Displayed through Sketchfab's official hosted viewer. Model geometry is unchanged.
 Presentation changes: camera path, transparent background, vignette disabled.
 Sketchfab branding is retained. No model file is redistributed in this repository.
+Mobile preview: the same model's author-published 1920x1080 thumbnail,
+served locally without image modifications; responsive CSS fits it to the preview panel.
+Source: https://media.sketchfab.com/models/2a29975b708b4106a84d5b51e3ede608/thumbnails/62864049041f415abdf1d3b71e213fb7/1f70b8f70ece483a8db4fe238a40ae65.jpeg
+Credit and CC BY 4.0 links are shown beside the preview. Tap activates the official 3D viewer.
 
 Interior: independently authored, simplified educational cutaway.
 It is not a scan or an exact representation of the varin model's interior.

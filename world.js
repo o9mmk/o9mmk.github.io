@@ -4,24 +4,29 @@ import {VarinViewer} from './varin-viewer.js';
 export class World {
  constructor(canvas,timeline) {
   this.canvas=canvas;
+  this.timeline=timeline;
   this.still=new URLSearchParams(location.search).get('still');
   this.exterior=new VarinViewer(canvas);
   this.ready=this.exterior.ready.then(()=>{
    canvas.dataset.model='varin-official-embed';
    canvas.dataset.modelTriangles='58528';
    document.getElementById('modelLoading')?.setAttribute('hidden','');
-   this.interiorReady=import('./interior-world.js').then(({InteriorWorld})=>{
-    this.interior=new InteriorWorld(canvas,timeline);
-   }).catch(error=>{
-    console.error('Interior preparation failed',error);
-    this.interiorError=error;
-   });
+  });
+ }
+ prepareInterior() {
+  if(this.interiorReady)return;
+  this.interiorReady=import('./interior-world.js').then(({InteriorWorld})=>{
+   this.interior=new InteriorWorld(this.canvas,this.timeline);
+  }).catch(error=>{
+   console.error('Interior preparation failed',error);
+   this.interiorError=error;
   });
  }
  canAdvance(t) {
   return Boolean(this.interior)||Boolean(this.still)||t<12.3||t>=22.5;
  }
  render(t,state,now) {
+  if(!state.manual&&!this.still&&t>=5&&t<22.5)this.prepareInterior();
   const requested=!state.manual&&!this.still&&t>=12.3&&t<22.5;
   if(this.interiorError&&requested)throw this.interiorError;
   const inside=requested&&Boolean(this.interior);

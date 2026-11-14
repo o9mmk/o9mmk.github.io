@@ -4,8 +4,9 @@ function loadSDK(){
  if(window.Sketchfab)return Promise.resolve();
  return new Promise((resolve,reject)=>{
   const script=document.createElement('script');
+  const timeout=setTimeout(()=>reject(new Error('3Dへの接続がタイムアウトしました。再読み込みしてください。')),15000);
   script.src='https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js';
-  script.onload=resolve;script.onerror=()=>reject(new Error('Sketchfabに接続できません。通信を確認して再読み込みしてください。'));
+  script.onload=()=>{clearTimeout(timeout);resolve();};script.onerror=()=>{clearTimeout(timeout);reject(new Error('Sketchfabに接続できません。通信を確認して再読み込みしてください。'));};
   document.head.append(script);
  });
 }
@@ -23,7 +24,7 @@ export class VarinViewer{
    const timeout=setTimeout(()=>reject(new Error('ギターの読み込みがタイムアウトしました。再読み込みしてください。')),60000);
    const fail=()=>{clearTimeout(timeout);reject(new Error('Sketchfabのギターを読み込めませんでした。'));};
    new window.Sketchfab(this.element).init(MODEL,{
-    max_texture_size:innerWidth<700?1024:8192,preload:0,ui_inspector:0,autostart:1,camera:0,dnt:1,transparent:1,ui_controls:0,ui_infos:0,ui_hint:0,ui_stop:0,ui_watermark:1,scrollwheel:0,
+    max_texture_size:innerWidth<700?2048:8192,preload:0,ui_inspector:0,autostart:1,camera:0,dnt:1,transparent:1,ui_controls:0,ui_infos:0,ui_hint:0,ui_stop:0,ui_watermark:1,scrollwheel:0,
     success:api=>{
      this.api=api;
      api.addEventListener('viewerready',()=>{
@@ -40,6 +41,7 @@ export class VarinViewer{
       api.setCameraLookAt(pose.position,pose.target,.001,error=>{
        if(error){reject(new Error('ギターのカメラを初期化できませんでした。'));return;}
        this.element.dataset.ready='true';resolve();
+       if(innerWidth<700)api.setTextureQuality('hd',error=>this.report(error));
       });
      });api.start();
     },error:fail
