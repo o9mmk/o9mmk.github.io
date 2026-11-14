@@ -23,7 +23,7 @@ export class VarinViewer{
    const timeout=setTimeout(()=>reject(new Error('ギターの読み込みがタイムアウトしました。再読み込みしてください。')),60000);
    const fail=()=>{clearTimeout(timeout);reject(new Error('Sketchfabのギターを読み込めませんでした。'));};
    new window.Sketchfab(this.element).init(MODEL,{
-    autostart:1,camera:0,dnt:1,transparent:1,ui_controls:0,ui_infos:0,ui_hint:0,ui_stop:0,ui_watermark:1,scrollwheel:0,
+    max_texture_size:innerWidth<700?1024:8192,preload:0,ui_inspector:0,autostart:1,camera:0,dnt:1,transparent:1,ui_controls:0,ui_infos:0,ui_hint:0,ui_stop:0,ui_watermark:1,scrollwheel:0,
     success:api=>{
      this.api=api;
      api.addEventListener('viewerready',()=>{
